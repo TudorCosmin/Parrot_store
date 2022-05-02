@@ -20,8 +20,11 @@ public class ParrotStore {
         order = new ArrayList<>();
     }
 
-    public void welcome() {
-        System.out.println("welcome");
+    public int welcome() {
+        System.out.println("Welcome to our store! Do you want to buy stuff or play with Carlos, our speaking parrot?");
+        System.out.println("1. Buy stuff");
+        System.out.println("2. Play with Carlos");
+        return scanner.nextInt();
     }
 
     public void placeOrder() {
@@ -111,6 +114,10 @@ public class ParrotStore {
             sum += item.getPrice();
 
         return sum;
+    }
+
+    public void playWithCarlos() {
+        System.out.println("Carlos will repeat after you. Enter your text here: ");
     }
 
 }

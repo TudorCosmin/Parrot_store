@@ -10,6 +10,6 @@ public class Macaw extends Parrot {
                 List.of(Big_cage,
                         Fresh_water,
                         Parrot_partner),
-                64.99);
+                65.0);
     }
 }

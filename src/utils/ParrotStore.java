@@ -2,10 +2,9 @@ package utils;
 
 import menu.Meniu;
 import menu.MenuBuilder;
-import menu.items.Item;
-import utils.ItemUtils;
+import menu.Item;
+import parrots.Parrot;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -68,9 +67,10 @@ public class ParrotStore {
             System.out.println("Thank you for your order!");
             System.out.println();
 
-            System.out.println("Order items: ");
+            System.out.println("Order: ");
             ItemUtils.displayItems(order);
-//            System.out.println("Total price: " + totalPrice() + "$ (discount applied)");
+            System.out.println("Total price: " + totalPrice() + "$\n");
+            displayRequirements();
         }
     }
 
@@ -82,8 +82,35 @@ public class ParrotStore {
     public void addOrderItem(Item item) {
         order.add(item);
 
-        System.out.printf("%s was added to your basket.", item.getDisplayName());
+        System.out.printf("%s was added to your order.", item.getName());
         System.out.println();
+    }
+
+    private void displayRequirements() {
+        int attention = 0;
+        List<Parrot> orderedParrots = new ArrayList<>();
+
+        for (Item item : order) {
+            if (item instanceof Parrot) {
+                if (attention == 0) {
+                    System.out.println("Attention please!");
+                    attention = 1;
+                }
+                if (!orderedParrots.contains(item)) {
+                    System.out.printf("%s has the following requirements: " + ((Parrot) item).getRequirements() + "\n", item.getName());
+                    orderedParrots.add((Parrot) item);
+                }
+            }
+        }
+    }
+
+    private double totalPrice() {
+        double sum = 0.0;
+
+        for (Item item : order)
+            sum += item.getPrice();
+
+        return sum;
     }
 
 }

@@ -1,17 +1,13 @@
-package food;
+package toys;
 
 import menu.Item;
 
-import java.util.List;
-
-public class Food implements Item {
+public class Toy implements Item {
     private final String name;
-    private final List<Ingredients> ingredients;
     private final Double price;
 
-    public Food(String name, List<Ingredients> ingredients, Double price) {
+    public Toy(String name, Double price) {
         this.name = name;
-        this.ingredients = ingredients;
         this.price = price;
     }
 
@@ -19,7 +15,6 @@ public class Food implements Item {
     @Override
     public void displayInformation(Integer index) {
         System.out.printf("%s. %s - %s$ \n", index, name, price);
-        System.out.println(ingredients);
     }
 
     @Override
@@ -31,5 +26,4 @@ public class Food implements Item {
     public double getPrice() {
         return price;
     }
-
 }

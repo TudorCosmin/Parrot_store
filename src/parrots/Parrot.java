@@ -1,6 +1,6 @@
 package parrots;
 
-import menu.items.Item;
+import menu.Item;
 
 import java.util.List;
 
@@ -18,16 +18,14 @@ public class Parrot implements Item {
 
     @Override
     public void displayInformation(Integer index) {
-        System.out.printf("%s. %s \n", index, name);
+        System.out.printf("%s. %s - %s$ \n", index, name, price);
     }
 
     @Override
-    public String getDisplayName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     @Override
-    public double getPrice() {
-        return price;
-    }
+    public double getPrice() { return price; }
+
+    public List<Requirements> getRequirements() { return requirements; }
 }

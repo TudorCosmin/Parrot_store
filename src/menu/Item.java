@@ -1,9 +1,9 @@
-package menu.items;
+package menu;
 
 public interface Item {
     void displayInformation(Integer index);
 
-    String getDisplayName();
+    String getName();
 
     double getPrice();
 }

@@ -12,6 +12,6 @@ public class FruitMix1 extends Food {
                         Papaya,
                         Passion_fruit,
                         Pomegranate),
-                9.99);
+                10.0);
     }
 }

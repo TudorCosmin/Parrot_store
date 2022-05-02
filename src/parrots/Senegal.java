@@ -12,6 +12,6 @@ public class Senegal extends Parrot {
                         Toys,
                         Fresh_water,
                         Lots_of_attention),
-                79.99);
+                80.0);
     }
 }

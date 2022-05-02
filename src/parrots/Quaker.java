@@ -9,6 +9,6 @@ public class Quaker extends Parrot {
         super("Quaker Parrot",
                 List.of(Small_cage,
                         Toys),
-                29.99);
+                30.0);
     }
 }

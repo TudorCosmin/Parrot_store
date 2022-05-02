@@ -12,6 +12,6 @@ public class FruitMix2 extends Food {
                         Citrus_fruits,
                         Pomegranate,
                         Peaches),
-                14.99);
+                15.0);
     }
 }

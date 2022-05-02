@@ -1,6 +1,6 @@
 package utils;
 
-import menu.items.Item;
+import menu.Item;
 
 import java.util.List;
 

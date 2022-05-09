@@ -17,9 +17,10 @@ public class Food implements Item {
 
 
     @Override
-    public void displayInformation(Integer index) {
-        System.out.printf("%s. %s - %s$ \n", index, name, price);
-        System.out.println(ingredients);
+    public String displayInformation(Integer index) {
+        return index + ". " + name + " - " + price + "\n" + ingredients + "\n";
+//        System.out.printf("%s. %s - %s$ \n", index, name, price);
+//        System.out.println(ingredients);
     }
 
     @Override

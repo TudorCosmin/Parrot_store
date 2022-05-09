@@ -13,8 +13,9 @@ public class Toy implements Item {
 
 
     @Override
-    public void displayInformation(Integer index) {
-        System.out.printf("%s. %s - %s$ \n", index, name, price);
+    public String displayInformation(Integer index) {
+        return index + ". " + name + " - " + price;
+//        System.out.printf("%s. %s - %s$ \n", index, name, price);
     }
 
     @Override

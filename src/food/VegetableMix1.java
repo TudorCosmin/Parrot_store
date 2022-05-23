@@ -6,7 +6,7 @@ import static food.Ingredients.*;
 
 public class VegetableMix1 extends Food {
     public VegetableMix1() {
-        super("Cool parrot veg mix",
+        super("VegetableMix1 for cool parrots",
                 List.of(Hot_peppers,
                         Collard_greens,
                         Courgettes,

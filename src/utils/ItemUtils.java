@@ -28,4 +28,30 @@ public class ItemUtils {
             e.printStackTrace();
         }
     }
+
+    public static void displayStringFile(List<String> items, String path) {
+        FileWriter filew = null;
+        try {
+            filew = new FileWriter(path, true);
+
+            for (String item : items)
+                filew.append("\n").append(item);
+            filew.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void displayIntFile(double item, String path) {
+        FileWriter filew = null;
+        try {
+            filew = new FileWriter(path, true);
+            filew.append("\n\nTotal price: ");
+            filew.append(String.valueOf(item));
+            filew.append("$\n");
+            filew.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

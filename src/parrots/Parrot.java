@@ -18,7 +18,7 @@ public class Parrot implements Item {
 
     @Override
     public String displayInformation(Integer index) {
-        return index + ". " + name + " - " + price + "\n";
+        return index + ". " + name + " - " + price + "$\n";
 //        System.out.printf("%s. %s - %s$ \n", index, name, price);
     }
 
